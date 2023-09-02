@@ -79,9 +79,11 @@ label.logo{
     text-align: center;
     color: #fff; /* Text color */
     font-size: 24px; /* Adjust font size as needed */
+    
 }
 .about{
   background-image: url('/images/slide_2.jpg');
+  
 }
 .dishes{
   background-image: url('/images/slide_3.jpg');
