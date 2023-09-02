@@ -1,42 +1,38 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
+!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>HomeMade | Grub</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HomeMadeGrub</title>
-
-    <!-- Include Tailwind CSS via CDN -->
+    <link rel="stylesheet" href="styles.css">
+    <link href="/dist/output.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-</head>
-<body>
-    <!-- Sidebar -->
-    <aside class="bg-gray-800 text-white h-screen w-1/4 fixed top-0 left-0 flex flex-col justify-between">
-        <!-- Logo or sidebar header -->
-        <div class="p-4">
-            <h1 class="text-2xl font-semibold">HomeMadeGrub</h1>
+  </head>
+  <body>
+<header class="flex flex-wrap sm:justify-start sm:flex-nowrap z-50 w-full bg-white text-sm py-4 dark:bg-gray-800">
+    <nav class="max-w-[85rem] w-full mx-auto px-4 sm:flex sm:items-center sm:justify-between" aria-label="Global">
+      <div class="flex items-center justify-between">
+        <a class="flex-none text-xl font-semibold dark:text-white" href="#">HomeMadeGrub</a>
+        <div class="sm:hidden">
+          <button type="button" class="hs-collapse-toggle p-2 inline-flex justify-center items-center gap-2 rounded-md border font-medium bg-white text-gray-700 shadow-sm align-middle hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-white focus:ring-blue-600 transition-all text-sm dark:bg-slate-900 dark:hover:bg-slate-800 dark:border-gray-700 dark:text-gray-400 dark:hover:text-white dark:focus:ring-offset-gray-800" data-hs-collapse="#navbar-alignment" aria-controls="navbar-alignment" aria-label="Toggle navigation">
+            <svg class="hs-collapse-open:hidden w-4 h-4" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+              <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"/>
+            </svg>
+            <svg class="hs-collapse-open:block hidden w-4 h-4" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+              <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"/>
+            </svg>
+          </button>
         </div>
-
-        <!-- Sidebar content -->
-        <nav class="p-2">
-            <ul>
-                <li class="mb-2"><a href="#" class="text-white hover:text-blue-400">Home</a></li>
-                <li class="mb-2"><a href="#" class="text-white hover:text-blue-400">About Us</a></li>
-                <li class="mb-2"><a href="#" class="text-white hover:text-blue-400">Dishes</a></li>
-                <li class="mb-2"><a href="#" class="text-white hover:text-blue-400">Chefs</a></li>
-            </ul>
-        </nav>
-
-        <!-- Sidebar footer or additional content -->
-        <div class="p-4">
-            <p class="text-sm">© 2023 HomeMadeGrub</p>
+      </div>
+      <div id="navbar-alignment" class="hs-collapse hidden overflow-hidden transition-all duration-300 basis-full grow sm:block">
+        <div class="flex flex-col gap-5 mt-5 sm:flex-row sm:items-center sm:mt-0 sm:pl-5">
+          <a class="font-medium text-blue-500" href="#" aria-current="page">Home</a>
+          <a class="font-medium text-gray-600 hover:text-gray-400 dark:text-gray-400 dark:hover:text-gray-500" href="#">About</a>
+          <a class="font-medium text-gray-600 hover:text-gray-400 dark:text-gray-400 dark:hover:text-gray-500" href="#">Dishes</a>
+          <a class="font-medium text-gray-600 hover:text-gray-400 dark:text-gray-400 dark:hover:text-gray-500" href="#">Chefs</a>
         </div>
-    </aside>
-
-    <!-- Main content -->
-    <main class="ml-1/4 p-6">
-        <!-- Your main content goes here -->
-        <h1 class="text-2xl font-semibold mb-4">Welcome to My Website</h1>
-        <p>This is the main content of your web page. It extends to the right of the sidebar.</p>
-    </main>
-</body>
+      </div>
+    </nav>
+  </header>
+  </body>
 </html>

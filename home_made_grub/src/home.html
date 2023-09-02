@@ -9,16 +9,12 @@
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
   </head>
   <body>
-    <div class="nav">
-      <!-- <label for="check" class="checkbtn">
-        <i class="fas fa-bars"></i>
-      </label> -->
-      <label class="logo">HomeMadeGrub</label>
-      <button class="btn">Sign Up</button>
-    </div>
-    <!-- <div class="sidebar"> -->
-    <div class="flex">
-        <div class="w-1/6 bg-gray-200">
+    <div class="fixed top-0 left-0 right-0 bg-opacity-50 backdrop-blur-md">
+      <label class="text-white text-2xl font-extrabold tracking-wide leading-tight">HomeMadeGrub</label>
+      <button class="bg-white text-blue-500 px-4 py-2 rounded hover:bg-blue-600 hover:text-white transition duration-300 ease-in-out float-right">Sign Up</button>
+  </div>
+  
+    <div class="w-10 h-24 fixed top-10 left-0 p-2  rounded-r-lg">
         <ul>
             <li><a href="#home">Home</a></li>
             <li><a href="#about">About</a></li>
@@ -26,9 +22,9 @@
             <li><a href="#chefs">Chefs</a></li>
           </ul>
         </div>
-    </div>
-    
-  <section class="home">
+    <!-- </div> -->
+
+    <section class="home">
       <div id="home" class="content">
           <h2>Welcome to HomeMadeGrub</h2>
           <p>Explore our delicious dishes and meet our talented chefs.</p>

@@ -633,8 +633,8 @@ body{
   margin: 0px;
   padding: 50px;
   width: 10px;
-  position: fixed;
-  height: 100%;
+  position: auto;
+  height: 20px;
   top: 0;
   left: 0;
   border-radius: 10px;
