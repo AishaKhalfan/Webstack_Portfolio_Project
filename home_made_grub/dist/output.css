@@ -634,13 +634,14 @@ video {
 
 body{
   font-family: montserrat;
-  background-image: url('/images/slide_1.jpg');
+  /* background-image: url('/images/slide_1.jpg'); */
   background-size: cover;
   /* This makes the image cover the entire body */
   background-repeat: no-repeat;
   /* Prevents the image from repeating */
   background-attachment: fixed;
   /* Makes the background image fixed while scrolling */
+  background-color: #D91400;
 }
 
 .sidebar{
