@@ -719,17 +719,17 @@ label.logo{
 .home{
   background-image:  url('/images/HHA-BG2.png')
 }
-.about{
+/* .about{
   background-image: url('/images/slide_2.jpg');
-}
+} */
 
-.dishes{
+/* .dishes{
   background-image: url('/images/slide_3.jpg');
-}
-
+} */
+/* 
 .chefs{
   background-image: url('/images/res_img_1.jpg');
-}
+} */
 
 .chef-grid {
   display: grid;
