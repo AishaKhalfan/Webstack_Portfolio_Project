@@ -2,6 +2,7 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HomeMade | Grub</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- <link rel="stylesheet" href="styles.css"> -->
@@ -9,69 +10,125 @@
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
   </head>
   <body>
-    <div class="fixed top-0 left-0 right-0 bg-opacity-50 backdrop-blur-md">
-      <label class="text-white text-2xl font-extrabold tracking-wide leading-tight">HomeMadeGrub</label>
-      <button class="bg-white text-blue-500 px-4 py-2 rounded hover:bg-blue-600 hover:text-white transition duration-300 ease-in-out float-right">Sign Up</button>
+    <div class="fixed flex-row top-0 left-0 right-0 bg-opacity-50 backdrop-blur-md">
+      <label class="flex items-center text-left text-white text-2xl font-extrabold tracking-wide leading-tight"><h1>🥗HomeMadeGrub🥗</h1></label>
+      <div>
+        <button class="bg-white text-blue-500 px-2 py-2 rounded hover:bg-yellow-600 hover:text-white transition duration-300 ease-in-out float-right">Sign Up</button>
+        <button class="bg-white text-blue-500 px-2 py-2 rounded hover:bg-yellow-600 hover:text-white transition duration-300 ease-in-out float-right ml-2">Sign In</button>
+      </div>
   </div>
   
-    <div class="text-yellow-500 font-semibold hover:underline w-10 h-24 fixed top-10 left-0 p-2  rounded">
+    <div class="text-yellow-600 font-semibold hover:underline w-10 h-24 fixed top-10 left-0 p-2  rounded">
         <ul>
             <li><a href="#home" class="hover:text-blue-700 ">Home</a></li>
             <li><a href="#about">About</a></li>
             <li><a href="#dishes">Dishes</a></li>
             <li><a href="#chefs">Chefs</a></li>
           </ul>
-        </div>
-    
-    <!-- <section class="home bg-[url('/images/slide_2.jpg')] py-100"> -->
-    <section class="home bg-D91400 py-100">
+    </div>
+        
+    <section class="home bg-url('/images/HHA-BG2.png') bg-cover bg-center h-screen px-32 py-16">
       <div id="home" class="container mx-auto text-center text-white">
           <h2 class="text-4xl font-bold mb-4">Welcome to HomeMadeGrub</h2>
           <p class="text-lg">Explore our delicious dishes and meet our talented chefs.</p>
+          
+          <div class="inset-x-0 p-4 border-t border-gray-300">
+            <form class="mx-auto w-64">
+              <input type="text"
+                class=" py-2 pr-10 pl-4 rounded-full border border-gray-300 focus:border-blue-500 focus:outline-none"
+                placeholder="Search..."
+              />
+            </form>
+          </div>
+          
+          
+          
       </div>
   </section>
   
-    <!-- <section class="home">
-      <div id="home" class="content">
-          <h2>Welcome to HomeMadeGrub</h2>
-          <p>Explore our delicious dishes and meet our talented chefs.</p>
-      </div>
+
+          <section id="about" class="about mb-4 bg-gray-100">
+            <div class="container mx-auto py-16" data-aos="fade-up">
+              <div class="section-title text-center">
+                <h2 class="text-3xl text-black font-bold">About Us</h2>
+              </div>
+
+              <div class="flex flex-wrap">
+                <div class="w-1/3 px-2 py-2">
+                  <img class="w40 h-40 rounded-full object-cover border-0" src="/images/delivery.jpg" alt="Image 1">
+                </div>
+                <div class="w-1/3 px-2 py-2">
+                  <img class="w-40 h-40 rounded-full object-cover border-0" src="/images/chef4.png" alt="Image 2">
+                </div>
+                <div class="w-1/3 px-2 py-2">
+                  <img class="w-40 h-40 rounded-full object-cover border-0" src="/images/delivery3.png" alt="Image 3">
+                </div>
+                <!-- <div class="mt-4">
+                  <a href="#" class="btn btn-primary">Join Us</a>
+                </div> -->
+              </div>
+          
+              <div class="flex flex-wrap justify-left mt-5 text-justify  font-sans \32xl\:text-sm">
+                <div class="lg:w-1/3 lg:px-4 mb-6 bg-red-600  rounded-md">
+                  <p class="text-white-700">
+                   A pioneering web app poised to redefine the food delivery landscape. Our mission is simple yet transformative: to bridge the gap between food enthusiasts and talented home cooks, ushering in a new era of wholesome dining experiences.
+                  </p>
+                </div>
+          
+                <div class="lg:w-1/3 lg:px-4 mb-6 rounded-md">
+                  <p class="text-gray-700">
+                   Our aim is to revolutionize the food delivery industry by connecting food enthusiasts with talented home cooks, allowing users to order wholesome home-cooked meals and have them conveniently delivered to their doorstep
+                  </p>
+                </div>
+                
+                <div class="lg:w-1/3 lg:px-4 mb-6 bg-red-600  rounded-md">
+                  <p class="text-white-700">
+                    Our vision is to be the leading food delivery platform in the world, providing a seamless and delightful experience for both food enthusiasts and home cooks.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </section>    
+
+      <!-- </div>
   </section>  -->
-  <section class="about">   
-      <div id="about" class="content">
-          <h2 class="text-sky-400/100">About Us</h2>
-          <p>Learn about our history, mission, and commitment to providing exceptional dining experiences.</p>
-      </div>
-  </section> 
-  <section class="dishes">
+
+  <!-- <section class="dishes bg-url('/images/slide_3.jpg') bg-cover bg-center h-screen py-16"> -->
+    <!-- <section class="dishes container mx-auto h-screen mb-4"> -->
+      <section class="dishes px-16 py-6 bg-gray-100 md:col-span-2">
       <div id="dishes" class="content">
-          <h2 class="text-sky-400/100">Our Dishes</h2>
-          <p>Discover our mouthwatering menu filled with a variety of culinary delights from around the world.</p>
+          <h2 class="text-black font-bold">Our Dishes</h2>
+          <p class="text-black">Discover our mouthwatering menu filled with a variety of culinary delights from around the world.</p>
+            <div class="grid grid-cols-3 gap-6 flex flex-row">
+              <a href="#" class="mr-4">
+                <img src="/images/slide_2.jpg" alt="Image 1" class="rounded-lg hover:opacity-50 transition-opacity duration-300">
+                <p class="text-gray-700 mt-2">Chicken Pot Pie</p>
+              </a>
+              <a href="#" class="mr-2">
+                <img src="/images/slide_3.jpg" alt="Image 2" class="rounded-lg hover:opacity-50 transition-opacity duration-300">
+                <p class="text-gray-700 mt-2">Colorful pasta </p>
+              </a>
+              <a href="#" class="mr-2">
+                <img src="/images/slide_1.jpg" alt="Image 3" class="rounded-lg hover:opacity-50 transition-opacity duration-300">
+                <p class="text-gray-700 mt-2">Vegetable Stir-Fry</p>
+              </a>
+              <a href="#" class="mr-4">
+                <img src="/images/swahili2.jpg" alt="Image 2" class="rounded-lg hover:opacity-50 transition-opacity duration-300">
+                <p class="text-gray-700 mt-2">Colorful pasta </p>
+              </a>
+              <a href="#" class="mr-4">
+                <img src="/images/res_img_8.jpg" alt="Image 2" class="rounded-lg hover:opacity-50 transition-opacity duration-300">
+                <p class="text-gray-700 mt-2">Colorful pasta</p>
+              </a>
+              <a href="#" class="mr-4">
+                <img src="/images/kenyan1.jpg" alt="Image 2" class="rounded-lg hover:opacity-50 transition-opacity duration-300">
+                <p class="text-gray-700 mt-2">Colorful pasta </p>
+              </a>
+            </div>    
       </div>
   </section>
-  <section class="chefs">
-      <div id="chefs" class="content">
-          <h2 class="text-sky-400/100">Our Chefs</h2>
-          <p>Meet the talented chefs behind our exquisite dishes and their passion for cooking.</p>
-          <div class="chef-grid">
-            <div class="chef">
-                <img src="chef1.jpg" alt="Chef 1">
-                <h3>Chef1</h3>
-                <p>Specialty: Italian Cuisine</p>
-            </div>
-            <div class="chef">
-                <img src="chef2.jpg" alt="Chef 2">
-                <h3>Chef2</h3>
-                <p>Specialty: French Cuisine</p>
-            </div>
-            <div class="chef">
-                <img src="chef3.jpg" alt="Chef 3">
-                <h3>Chef3</h3>
-                <p>Specialty: Japanese Cuisine</p>
-            </div>
-        </div>
-      </div>
-  </section>
+
+  
  
   </body>
 </html>

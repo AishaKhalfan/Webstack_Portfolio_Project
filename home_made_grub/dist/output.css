@@ -641,7 +641,7 @@ body{
   /* Prevents the image from repeating */
   background-attachment: fixed;
   /* Makes the background image fixed while scrolling */
-  background-color: #D91400;
+  /* background-color: #D91400; */
 }
 
 .sidebar{
@@ -716,18 +716,20 @@ label.logo{
   font-size: 24px;
   /* Adjust font size as needed */
 }
-
-.about{
+.home{
+  background-image:  url('/images/HHA-BG2.png')
+}
+/* .about{
   background-image: url('/images/slide_2.jpg');
-}
+} */
 
-.dishes{
+/* .dishes{
   background-image: url('/images/slide_3.jpg');
-}
-
+} */
+/* 
 .chefs{
   background-image: url('/images/res_img_1.jpg');
-}
+} */
 
 .chef-grid {
   display: grid;
