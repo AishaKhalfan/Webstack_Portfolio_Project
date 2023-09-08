@@ -3,15 +3,19 @@ import { Link } from 'react-router-dom';
 
 function Header() {
   return (
-    <div className="flex justify-between">
+      <div className="flex justify-between">
         <label className="">HomeMadeGrub</label>
         <div>
-          <Link to="/">Home</Link>
-          <Link to="/order">Order</Link>
-          <Link to="/login">Login</Link>
-        {/* Add conditional rendering here for Sign Up or Profile button */}
+          <nav>
+            <ul>
+              <li><Link to="/">Home</Link></li>
+              <li><Link to="/order">Order</Link></li>
+              <li><Link to="/login">Login</Link></li>
+            </ul>
+          </nav>
+        {/* conditional rendering Sign Up or Profile button */}
+        </div>
       </div>
-    </div>
   );
 }
 

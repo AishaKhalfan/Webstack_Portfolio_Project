@@ -1,5 +1,4 @@
 import React from 'react';
-import { Routes, Route } from 'react-router-dom';
 
 function OrderPage() {
   return (
@@ -8,13 +7,5 @@ function OrderPage() {
     </div>
   );
 }
-// Define route configuration for MainPage
-function OrderPageRoutes() {
-    return (
-      <Routes>
-        <Route path="/order" element={<OrderPage />} />
-      </Routes>
-    );
-  }
 
-export default OrderPageRoutes;
+export default OrderPage;

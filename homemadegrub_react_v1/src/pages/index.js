@@ -1,9 +1,9 @@
-import LoginPageRoutes from "./LoginPage";
-import MainPageRoutes from "./MainPage";
-import OrderPageRoutes from "./OrderPage";
+import LoginPage from "./LoginPage";
+import MainPage from "./MainPage";
+import OrderPage from "./OrderPage";
 
 export {
-    LoginPageRoutes,
-    MainPageRoutes,
-    OrderPageRoutes,
+    LoginPage,
+    MainPage,
+    OrderPage,
 };

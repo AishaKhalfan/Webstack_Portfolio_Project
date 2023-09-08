@@ -1,5 +1,4 @@
 import React from 'react';
-import { Routes, Route } from 'react-router-dom';
 
 function LoginPage() {
   return (
@@ -8,13 +7,5 @@ function LoginPage() {
     </div>
   );
 }
-// Define route configuration for MainPage
-function LoginPageRoutes() {
-    return (
-      <Routes>
-        <Route path="/login" element={<LoginPage />} />
-      </Routes>
-    );
-  }
 
-export default LoginPageRoutes;
+export default LoginPage;
