@@ -8,8 +8,8 @@ function App() {
       <div className="App">
         <Router>
           <Header />
-          <div className="px-6 h-[calc(100vh-72px)] overflow-y-scroll hide-scrollbar flex xl:flex-row flex-col-reverse">
-            <div className="h-screen">
+          <div className="px-6 h-[calc(100vh-72px)] hide-scrollbar flex xl:flex-row flex-col-reverse">
+            <div className="h-screen overflow-y-scroll">
               <Routes>
                 <Route path="/" element={<MainPage />} />
                 <Route path="/login" element={<LoginPage />} />
