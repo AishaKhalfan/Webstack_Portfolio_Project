@@ -37,8 +37,7 @@ function JoinUs() {
             <p className="text-lg font-bold mt-2">Deliver with Confidence</p>
             "Unleash Your Earning Potential!"<br />
             Are you ready to turn the ignition on a rewarding career? 
-            Join us as a delivery driver and accelerate your income.<br /> 
-            Sign up to start delivering food to our clients.
+            Join us as a delivery driver and accelerate your income.
           </Link>
         </div>
       </div>
