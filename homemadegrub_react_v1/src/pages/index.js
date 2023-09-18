@@ -4,6 +4,7 @@ import OrderPage from "./OrderPage";
 import SignUpClientPage from "./SignUpClientPage";
 import SignUpChefPage from "./SignUpChefPage";
 import SignUpDeliveryPage from "./SignUpDeliveryPage";
+import AppContainerPage  from "./AppContainerPage";
 
 export {
     LoginPage,
@@ -12,4 +13,5 @@ export {
     SignUpClientPage,
     SignUpChefPage,
     SignUpDeliveryPage,
+    AppContainerPage,
 };

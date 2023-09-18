@@ -4,6 +4,7 @@ import About from '../components/About';
 import Dishes from '../components/Dishes';
 import Chefs from '../components/Chefs';
 import JoinUs from '../components/JoinUs';
+import AppContainer from '../components/AppContainer';
 
 function MainPage() {
   return (
@@ -13,6 +14,7 @@ function MainPage() {
         <JoinUs/>
         <Dishes />
         <Chefs />
+        <AppContainer />
     </div>
   );
 }
