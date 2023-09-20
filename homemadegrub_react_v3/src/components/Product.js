@@ -3,14 +3,15 @@ import { HandleFetch } from "./Api";
 //import "./App.css";
 import CartButton from "./CartButton";
 import { useDispatch, useSelector } from 'react-redux';
-import { addToCart } from "../redux/CartActions";
+import { addToCart, removeFromCart } from "../redux/CartActions";
 
 function Product({ toshow }) {
   const [pro, setPro] = useState([]);
   const [value, setValue] = useState("");
   const [filtered, setFiltered] = useState([]);
   const dispatch = useDispatch();
-  const cart = useSelector((state) => state.cart); // Get cart state from Redux
+  const cart = useSelector((state) => state.cart.cartItems); // Get cart state from Redux
+
 
   useEffect(() => {
     const getList = async () => {
@@ -65,7 +66,7 @@ function Product({ toshow }) {
               // added an onclick event to each pizza item
               <div
                 style={{ backgroundImage: `url(${item.image})` }}
-                className="pizza1"
+                className="pizza1" key={item.amount}
               >
                 <h3>{item.name}</h3>
                 <p className="p">{item.decription}</p>
@@ -73,9 +74,9 @@ function Product({ toshow }) {
                 <button
                   className="btn"
                   onClick={() => {
+                    dispatch(addToCart(item.name));
                     // added a function to add the pizza to the cart
                     alert(`${item.name} has been added to cart`);
-                    dispatch(addToCart(item));
                   }}
                 >
                   Add to basket
@@ -101,10 +102,7 @@ function Product({ toshow }) {
                   <h3>{item.name}</h3>
                   <p>{item.amount}$</p>
                   <button className="btn" onClick={(e)=>{
-                    // remove item from cart
-                    cart.splice(index, 1);
-                    let x = cart;
-                    addToCart([...x]);
+                   dispatch(removeFromCart(item.name)); 
                   }} >Remove Item</button>
                 </div>
               );

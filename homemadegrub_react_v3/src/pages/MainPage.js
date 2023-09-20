@@ -8,7 +8,7 @@ import { useSelector } from 'react-redux';
 // import Chefs from '../components/Chefs';
 
 function MainPage() {
-  const user = useSelector((state) => state.user);
+  const user = useSelector((state) => state.auth.user);
   var renderJoinUs = null;
   var renderProducts = null;
 

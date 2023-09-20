@@ -7,10 +7,10 @@ import { logOut } from "../redux/authActions";
 import { useNavigate } from 'react-router-dom';
 
 
-function Header({ showing }) {
+function Header() {
   const navigate = useNavigate(); 
   const dispatch = useDispatch();
-  const user = useSelector((state) => state.user);
+  const user = useSelector((state) => state.auth.user);
 
   const handleLogOut = (e) => {
     e.preventDefault();
@@ -36,7 +36,7 @@ function Header({ showing }) {
         <li className="bg-white text-blue-500 px-2 py-2 rounded hover:bg-red-600 hover:text-white transition duration-300 ease-in-out float-right">
           <Link to="/order">Order</Link>
         </li>
-        {user.id ? (
+        {user && user.id ? (
           // Render Logout button when user is logged in
           <li className="bg-white text-blue-500 px-2 py-2 rounded hover:bg-red-600 hover:text-white transition duration-300 ease-in-out float-right">
             <button
