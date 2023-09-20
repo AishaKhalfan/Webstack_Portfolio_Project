@@ -1,8 +1,10 @@
 import { configureStore, combineReducers } from 'redux';
-import authReducer from './authReducer'; // Your authentication reducer
+import authReducer from './authReducer'; // authentication reducer
+import cartReducer from './cartReducer'; // cart reducer
 
 const rootReducer = combineReducers({
-  auth: authReducer, // Add other reducers here if needed
+  auth: authReducer,
+  cart: cartReducer,
 });
 
 const store = configureStore({

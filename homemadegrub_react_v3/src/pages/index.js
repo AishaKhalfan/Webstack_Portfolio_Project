@@ -1,4 +1,5 @@
 import LoginPage from "./LoginPage";
+import SignUpPage from "./SignUpPage";
 import MainPage from "./MainPage";
 import OrderPage from "./OrderPage";
 import SignUpClientPage from "./SignUpClientPage";
@@ -13,5 +14,6 @@ export {
     SignUpClientPage,
     SignUpChefPage,
     SignUpDeliveryPage,
+    SignUpPage
     // ProductPage,
 };

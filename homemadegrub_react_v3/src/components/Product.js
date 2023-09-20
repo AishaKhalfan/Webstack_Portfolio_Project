@@ -1,15 +1,16 @@
 import { React, useState, useEffect, useCallback } from "react";
 import { HandleFetch } from "./Api";
-import "./App.css";
+//import "./App.css";
 import CartButton from "./CartButton";
+import { useDispatch, useSelector } from 'react-redux';
+import { addToCart } from "../redux/CartActions";
 
 function Product({ toshow }) {
   const [pro, setPro] = useState([]);
-  //  new state for cart
-  const [cart, addToCart] = useState([]);
-
   const [value, setValue] = useState("");
   const [filtered, setFiltered] = useState([]);
+  const dispatch = useDispatch();
+  const cart = useSelector((state) => state.cart); // Get cart state from Redux
 
   useEffect(() => {
     const getList = async () => {
@@ -74,9 +75,7 @@ function Product({ toshow }) {
                   onClick={() => {
                     // added a function to add the pizza to the cart
                     alert(`${item.name} has been added to cart`);
-                    // spread previous values and append new one
-                    addToCart([...cart, item]);
-                    console.log(cart);
+                    dispatch(addToCart(item));
                   }}
                 >
                   Add to basket

@@ -1,20 +1,15 @@
 import React from "react";
-import "./App.css";
+import { useSelector } from "react-redux";
 
-function CartButton({ showing }) {
-  const [show, setShow] = React.useState(true);
+function CartButton() {
+  const cart = useSelector((state) => state.cart);
 
   return (
-    <button
-      href="/cart"
-      className="cart-btn"
-      onClick={() => {
-        setShow(!show);
-        showing(!show);
-      }}
-    >
-      {show ? "close" : "View Cart"}
-    </button>
+    <div className="cart-button">
+      <button className="btn btn-cart">
+        Cart ({cart.cartItems.length})
+      </button>
+    </div>
   );
 }
 

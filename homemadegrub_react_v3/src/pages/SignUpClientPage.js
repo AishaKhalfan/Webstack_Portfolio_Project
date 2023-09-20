@@ -1,60 +1,61 @@
-import React from 'react';
+import React, { useState } from 'react';
+import { useDispatch } from 'react-redux';
+import { signUp } from '../redux/authActions';
+import { useNavigate } from 'react-router-dom';
 
-function SignUpClientPage() {
+function SignUpChefPage() {
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
+  const dispatch = useDispatch();
+  const navigate = useNavigate(); 
+
+  const handleSignUp = (e) => {
+    e.preventDefault();
+    dispatch(signUp(email, password));
+    navigate('/');
+  };
+
+  // event handlers to update email and password
+  const handleEmailChange = (e) => {
+    setEmail(e.target.value);
+  };
+
+  const handlePasswordChange = (e) => {
+    setPassword(e.target.value);
+  };
+
   return (
-    <div className="h-screen w-screen flex justify-center items-center bg-gray-100">
-      <div className="bg-white p-8 rounded shadow-md w-96">
-        <h2 className="text-2xl font-semibold mb-4">Login</h2>
-        <form>
-          <div className="mb-4">
-            <label htmlFor="email" className="block text-gray-600">
-              Email
-            </label>
-            <input
-              type="email"
-              id="email"
-              name="email"
-              className="w-full px-3 py-2 border rounded focus:outline-none focus:border-blue-500"
-              placeholder="Enter your Email"
-              required
-            />
-          </div>
-          <div className="mb-4">
-            <label htmlFor="password" className="block text-gray-600">
-              Password
-            </label>
-            <input
-              type="password"
-              id="password"
-              name="password"
-              className="w-full px-3 py-2 border rounded focus:outline-none focus:border-blue-500"
-              placeholder="Enter your password"
-              required
-            />
-          </div>
-          <div className="mb-4">
-            <button
-              type="submit"
-              className="w-full bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-600"
-            >
-              Login
-            </button>
-          </div>
-        </form>
-        <div className="flex justify-between">
-          <button className="bg-green-500 text-white py-2 px-4 rounded hover:bg-green-600">
-           Client
-          </button>
-          <button className="bg-red-500 text-white py-2 px-4 rounded hover:bg-red-600">
-            Chefs
-          </button>
-          <button className="bg-yellow-500 text-white py-2 px-4 rounded hover:bg-yellow-600">
-          Delivery
-          </button>
+    <div class="h-screen w-screen flex flex-col justify-center items-center bg-gray-100 mr-16">
+        <h2>Sign Up as a Client</h2>
+        <div class="bg-white p-8 rounded shadow-md w-96 mx-auto">
+            <h2 class="text-2xl font-semibold mb-4">Create an account</h2>
+            <form>
+                <div class="mb-4">
+                    <label for="email" class="block text-gray-600">Email</label>
+                    <input type="email" id="email" name="email"
+                        className="w-full px-3 py-2 border rounded focus:outline-none focus:border-blue-500"
+                        placeholder="Enter your Email" required
+                        value={email} onChange={handleEmailChange}/>
+                </div>
+                <div class="mb-4">
+                    <label for="password" class="block text-gray-600">Password</label>
+                    <input type="password" id="password" name="password"
+                        className="w-full px-3 py-2 border rounded focus:outline-none focus:border-blue-500"
+                        placeholder="Enter your password" required
+                        value={password} onChange={handlePasswordChange}/>
+                </div>
+                <div class="mb-4">
+                  <button
+                    type="button"
+                    onClick={handleSignUp}
+                    className="w-full bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-600">
+                        Sign Up
+                  </button>
+                </div>
+            </form>
         </div>
-      </div>
     </div>
   );
 }
 
-export default SignUpClientPage;
+export default SignUpChefPage;
