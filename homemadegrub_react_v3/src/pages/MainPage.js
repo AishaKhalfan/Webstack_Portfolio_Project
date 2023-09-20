@@ -4,8 +4,7 @@ import Product from '../components/Product';
 import About from '../components/About';
 import JoinUs from '../components/JoinUs';
 import { useSelector } from 'react-redux';
-// import Dishes from '../components/Dishes';
-// import Chefs from '../components/Chefs';
+import Footer from '../components/Footer';
 
 function MainPage() {
   const user = useSelector((state) => state.auth.user);
@@ -25,6 +24,7 @@ function MainPage() {
         {renderJoinUs}
         {renderProducts}
         <About />
+        <Footer />
     </div>
   );
 }

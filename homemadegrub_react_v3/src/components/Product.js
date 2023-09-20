@@ -1,9 +1,9 @@
 import { React, useState, useEffect, useCallback } from "react";
 import { HandleFetch } from "./Api";
-//import "./App.css";
 import CartButton from "./CartButton";
 import { useDispatch, useSelector } from 'react-redux';
 import { addToCart, removeFromCart } from "../redux/CartActions";
+import  styles from './cart.module.css';
 
 function Product({ toshow }) {
   const [pro, setPro] = useState([]);

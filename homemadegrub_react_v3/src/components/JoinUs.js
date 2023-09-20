@@ -9,7 +9,7 @@ import delivery3 from "../images/delivery3.png";
 
 function JoinUs() {
   return (
-    <section id="join-us" className="join-us bg-gray-200 mx-auto mt-8 p-8 mb-4 min-h-screen">
+    <section id="join-us" className="join-us bg-gray-200 mx-auto mt-8 p-8 mb-4">
       <div className="container mx-auto " data-aos="fade-up">
         <div className="section-title text-center">
           <h2 className="text-3xl text-black font-bold">Join Us</h2>

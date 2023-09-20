@@ -15,7 +15,7 @@ function Header() {
   const handleLogOut = (e) => {
     e.preventDefault();
     dispatch(logOut());
-    navigate('/');
+    navigate('/login');
   };
 
   return (
@@ -30,6 +30,9 @@ function Header() {
         </Link>
       </div>
       <ul>
+      <li className="bg-white text-blue-500 px-2 py-2 rounded hover:bg-red-600 hover:text-white transition duration-300 ease-in-out float-right">
+          <CartButton />
+      </li>
         <li className="bg-white text-blue-500 px-2 py-2 rounded hover:bg-red-600 hover:text-white transition duration-300 ease-in-out float-right">
           <Link to="/">Home</Link>
         </li>
@@ -41,9 +44,8 @@ function Header() {
           <li className="bg-white text-blue-500 px-2 py-2 rounded hover:bg-red-600 hover:text-white transition duration-300 ease-in-out float-right">
             <button
               type="button"
-              onClick={handleLogOut}
-              className="w-full bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-600">
-                   Logout
+              onClick={handleLogOut} >
+              Logout
             </button>
           </li>
         ) : (
@@ -57,7 +59,6 @@ function Header() {
             </li>
           </>
         )}
-         <CartButton />
       </ul>
     </div>
   );

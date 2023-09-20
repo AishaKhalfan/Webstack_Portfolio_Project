@@ -5,7 +5,8 @@ import OrderPage from "./OrderPage";
 import SignUpClientPage from "./SignUpClientPage";
 import SignUpChefPage from "./SignUpChefPage";
 import SignUpDeliveryPage from "./SignUpDeliveryPage";
-// import ProductPage from "./ProductPage";
+import CartPage from "./CartPage";
+
 
 export {
     LoginPage,
@@ -14,6 +15,6 @@ export {
     SignUpClientPage,
     SignUpChefPage,
     SignUpDeliveryPage,
-    SignUpPage
-    // ProductPage,
+    SignUpPage,
+    CartPage
 };

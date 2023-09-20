@@ -1,13 +1,14 @@
 import React from "react";
 import { useSelector } from "react-redux";
+import { Link } from "react-router-dom";
 
 function CartButton() {
   const cart = useSelector((state) => state.cart.cartItems);
 
   return (
-    <div className="cart-button">
-      <button className="btn btn-cart">
-        Cart ({cart})
+    <div>
+      <button>
+        <Link to='/cart'>Cart({cart.length})</Link>
       </button>
     </div>
   );

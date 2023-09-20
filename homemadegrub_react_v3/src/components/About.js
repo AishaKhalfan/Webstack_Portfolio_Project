@@ -5,7 +5,7 @@ import delivery3 from "../images/delivery3.png";
 
 function About() {
   return (
-    <section id="about" class="about mb-4 bg-white-400 mx-auto  min-h-screen">
+    <section id="about" class="about mb-4 bg-white-400 mx-auto">
       <div class="container mx-auto" data-aos="fade-up">
         <div class="section-title text-center">
           <h2 class="text-3xl text-black font-bold">About Us</h2>

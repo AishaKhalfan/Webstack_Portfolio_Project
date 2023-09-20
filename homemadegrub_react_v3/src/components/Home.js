@@ -6,8 +6,8 @@ import { useSelector } from 'react-redux';
 import backgroundImage from '../images/HHCOVER.png';
 
 function Home() {
-  const user = useSelector((state) => state.user);
-  const error = useSelector((state) => state.error);
+  const user = useSelector((state) => state.auth.user);
+  const error = useSelector((state) => state.auth.error);
     const backgroundImageStyle = {
         backgroundImage: `url(${backgroundImage})`, // Use the imported image as the background
       };
@@ -19,14 +19,14 @@ function Home() {
           <p class="text-lg lg:text-xl">Explore our delicious dishes and meet our talented chefs.</p>
           <UserContent user={user} />
           {error? <div className='min-h-screen bg-white'>Error logging in</div> : <div></div>}
-          <div>
+          {/* <div>
             <form class="mx-auto lg:w-1/2">
               <input type="text"
                 class=" py-2 pr-10 pl-4 rounded-full border border-gray-300 focus:border-blue-500 focus:outline-none"
-                placeholder="Search..."
+                placeholder=""
               />
             </form>
-          </div>  
+          </div>   */}
       </div>
       </div>
   </section>

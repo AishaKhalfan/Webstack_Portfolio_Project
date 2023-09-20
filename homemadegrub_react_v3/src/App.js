@@ -4,7 +4,7 @@ import Header from './components/Header';
 
 import { MainPage, LoginPage, OrderPage,
          SignUpChefPage, SignUpClientPage,
-         SignUpDeliveryPage, SignUpPage } from './pages';
+         SignUpDeliveryPage, SignUpPage, CartPage } from './pages';
 import './App.css';
 
 
@@ -22,9 +22,8 @@ function App() {
                 <Route path="/clientsignup" element={<SignUpClientPage />} />
                 <Route path="/deliverysignup" element={<SignUpDeliveryPage />} />
                 <Route path="/order" element={<OrderPage />} />
-                <Route path="/cart" element={<OrderPage />} />
                 <Route path="/signup" element={<SignUpPage />} />
-	  	          
+                <Route path="/cart" element={<CartPage />} />
               </Routes>
           </div>
         </Router>
