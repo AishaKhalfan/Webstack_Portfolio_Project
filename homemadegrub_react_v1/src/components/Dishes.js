@@ -55,7 +55,7 @@ function Dishes() {
   };
 
   return (
-    <section className="dishes px-16 py-6 bg-yellow-100 md:col-span-2">
+    <section className="dishes px-16 py-6 bg-red-600 md:col-span-2">
       <div id="dishes" className="content">
         <h2 className="text-black font-bold">Our Dishes</h2>
         <p className="text-black">
@@ -70,7 +70,7 @@ function Dishes() {
                 className="rounded-lg hover:opacity-50 transition-opacity duration-300 cursor-pointer"
                 onClick={() => openPopUp(dish)}
               />
-              <p className="text-gray-700 mt-2">{dish.name}</p>
+              <p className="text-white mt-2">{dish.name}</p>
             </div>
           ))}
         </div>
