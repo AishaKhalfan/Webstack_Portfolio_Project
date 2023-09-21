@@ -1,18 +1,21 @@
 import { React, useState, useEffect, useCallback } from "react";
 import { HandleFetch } from "./Api";
-import CartButton from "./CartButton";
 import { useDispatch, useSelector } from 'react-redux';
-import { addToCart, removeFromCart } from "../redux/CartActions";
-import  styles from './cart.module.css';
+import { addToCart } from "../redux/CartActions";
+import { useNavigate } from 'react-router-dom';
+import CartPage from "../pages/CartPage";
 
 function Product({ toshow }) {
   const [pro, setPro] = useState([]);
   const [value, setValue] = useState("");
   const [filtered, setFiltered] = useState([]);
   const dispatch = useDispatch();
-  const cart = useSelector((state) => state.cart.cartItems); // Get cart state from Redux
+  const navigate = useNavigate();
+  const user = useSelector((state) => state.auth.user);
 
-
+  if (user.id === null || !(user)) {
+    navigate('/login');
+  }
   useEffect(() => {
     const getList = async () => {
       try {
@@ -57,7 +60,6 @@ function Product({ toshow }) {
           }}
           
         />
-        <CartButton />
       </div>
       <div className="food-grid">
         {filtered &&
@@ -74,7 +76,7 @@ function Product({ toshow }) {
                 <button
                   className="btn"
                   onClick={() => {
-                    dispatch(addToCart(item.name));
+                    dispatch(addToCart(item));
                     // added a function to add the pizza to the cart
                     alert(`${item.name} has been added to cart`);
                   }}
@@ -88,32 +90,7 @@ function Product({ toshow }) {
       {/* cart window */}
       {/* if show is true */}
       {toshow ? (
-        <div className=" cart-cont">
-          <div className="cart-list">
-            <h1>Cart</h1>
-            {/* cart items */}
-            {cart && cart.map((item, index) => {
-              return (
-                <div
-                  style={{ backgroundImage: `url(${item.image})` }}
-                  className="cart"
-                  key={index}
-                >
-                  <h3>{item.name}</h3>
-                  <p>{item.amount}$</p>
-                  <button className="btn" onClick={(e)=>{
-                   dispatch(removeFromCart(item.name)); 
-                  }} >Remove Item</button>
-                </div>
-              );
-            })}
-          </div>
-          <div className="total">
-            <h1>Total</h1>
-            <p>{cart.reduce((a, b) => a + b.amount, 0)}$</p>
-            <button>Check out</button>
-          </div>
-        </div>
+        <CartPage />
       ) : null}
     </div>
   );
