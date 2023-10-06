@@ -16,6 +16,7 @@ function Header() {
     e.preventDefault();
     dispatch(logOut());
     navigate('/login');
+    window.location.reload();
   };
 
   return (
