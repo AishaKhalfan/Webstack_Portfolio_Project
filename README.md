@@ -1,10 +1,10 @@
 <strong><u>Description of the project</u></strong>  
 HomeMadeGrub is a fully functional web platform that connects home cooks and food lovers, offering a convenient way for users to order and enjoy delicious, homemade meals prepared with care. The website promotes the idea of enjoying wholesome and healthier food options from local home kitchens.
 
-**__Team members__**
-Aisha Khalifan 
-Irungu Josphat
-Hazi Adan
+<strong><u>Team members</u></strong>  
+Aisha Khalifan  
+Irungu Josphat  
+Hazi Adan  
 
 
 echo -e "\e[1m\e[4mTechnologies used\e[0m"
