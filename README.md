@@ -1,7 +1,7 @@
-echo -e "\e[1m\e[4mDescription of the project\e[0m"
+**__Description of the project__**
 HomeMadeGrub is a fully functional web platform that connects home cooks and food lovers, offering a convenient way for users to order and enjoy delicious, homemade meals prepared with care. The website promotes the idea of enjoying wholesome and healthier food options from local home kitchens.
 
-echo -e "\e[1m\e[4mTeam members\e[0m"
+**__Team members__**
 Aisha Khalifan 
 Irungu Josphat
 Hazi Adan
